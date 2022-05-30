@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+        <title> SRCAL </title>
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <!-- GOOGLE FONT -->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600&family=Noto+Sans+JP:wght@500&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="calculator">
+            <header>
+                <div class="logo">
+                    SRCAL
+                </div>
+                <div class="outputBox">
+                    <input class="inputOutput output" type="text" readonly="readonly">
+                    <span class="cutArray" onclick="cut()">←</span>
+                    <input class="resultOutput output" type="text" readonly="readonly">
+                </div>
+            </header>
+            <div class="container">
+                <div class="row">
+                    <button class="btn ac" onclick="ac()">AC</button>
+                    <button class="btn" onclick="perenthisisStart()">(</button>
+                    <button class="btn" onclick="perenthisisEnd()">)</button>
+                    <button class="btn btnSc" onclick="mod()">%</button>
+                    <button class="btn btnSc" onclick="mPos()">m+</button>
+                    <button class="btn btnSc" onclick="mNeg()">m–</button>
+                    <button class="btn btnSc" onclick="mR()">mr</button>
+                    <button class="btn btnSc" onclick="posNeg()">±</button>
+                    <button class="btn btnSc cutBtn" onclick="cut()">C</button>
+                    <button class="btn operator" onclick="divide()">÷</button>
+                </div>
+                <div class="row">
+                    <button  class="btn" onclick="seven()">7</button>
+                    <button class="btn" onclick="eight()">8</button>
+                    <button class="btn" onclick="nine()">9</button>
+                    <button class="btn btnSc" onclick="fraction()">1/x</button>
+                    <button class="btn btnSc" onclick="square()">x²</button>
+                    <button class="btn btnSc" onclick="power()">xʸ</button>
+                    <button class="btn btnSc" onclick="sqrt()">√</button>
+                    <button class="btn btnSc" onclick="cbrt()">³√</button>
+                    <button class="btn operator" onclick="multiple()">×</button>
+                    <button class="btn btnSc" onclick="comma()">‚</button>
+                </div>
+                <div class="row">
+                    <button class="btn" onclick="four()">4</button>
+                    <button class="btn" onclick="five()">5</button>
+                    <button class="btn" onclick="six()">6</button>
+                    <button class="btn btnSc">a</button>
+                    <button class="btn btnSc" onclick="log()">log</button>
+                    <button class="btn btnSc" onclick="ln()">ln</button>
+                    <button class="btn btnSc" onclick="sin()">sin</button>
+                    <button class="btn btnSc" onclick="cos()">cos</button>
+                    <button class="btn btnSc" onclick="tan()">tan</button>
+                    <button class="btn operator" onclick="sub()">–</button>
+                </div>
+                <div class="row">
+                    <button class="btn" onclick="one()">1</button>
+                    <button class="btn" onclick="two()">2</button>
+                    <button class="btn" onclick="three()">3</button>
+                    <button class="btn btnSc" onclick="factorial()">x!</button>
+                    <button class="btn btnSc">log₂</button>
+                    <button class="btn btnSc" onclick="exp()">eˣ</button>
+                    <button class="btn btnSc">sin⁻¹</button>
+                    <button class="btn btnSc">cos⁻¹</button>
+                    <button class="btn btnSc">tan⁻¹</button>
+                    <button class="btn operator add" onclick="add()">+</button>
+                </div>
+                <div class="row">
+                    <button class="btn" onclick="zero();">0</button>
+                    <button class="btn" onclick="dot()">•</button>
+                    <button class="btn btnSc dblZero" onclick="dblZero()">00</button>
+                    <button class="btn btnSc" onclick="pi()">π</button>
+                    <button class="btn btnSc">2ˣ</button>
+                    <button class="btn btnSc" onclick="random()">Rand</button>
+                    <button class="btn btnSc" onclick="preAns()">Ans</button>
+                    <button class="btn equal" onclick="equal()">=</button>
+                </div>
+            </div>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>

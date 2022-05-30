@@ -1,0 +1,207 @@
+@font-face{
+    font-family: "DSDIGI";
+    src: url("DSDIGI.ttf");
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 10px;
+    font-family: Arial;
+}
+body {
+    background-color: #ddd;
+}
+.calculator {
+    background: #652F91;
+    width: 80rem;
+    height: 55rem;
+    margin: auto;
+    margin-top: 10vh;
+    border-radius: 5% 5% 5% 5%;
+    position: relative;
+    border: .05rem solid rgb(56,25,81);
+    border-bottom: .3rem solid rgb(56,25,81);
+    box-shadow: 0.5rem 0.5rem 1rem 0.1rem rgba(0, 0, 0, 0.2), -0.5rem -0.5rem 1rem 0 rgba(255, 255, 255, 0.5);
+}
+.logo {
+    position: absolute;
+    top: 9%;
+    right: 10%;
+    font-size: 1.5rem;
+    font-family: "DSDIGI";
+    color: rgba(0,0,0,0.552);
+    font-weight: 600;
+    letter-spacing: 0.2rem;
+    text-shadow: white 0.5px 0.5px 0px;
+}
+.outputBox {
+    width: 80%;
+    padding: 1rem;
+    position: absolute;
+    top: 13%;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+.output {
+    width: 100%;
+    padding: .7rem;
+    font-size: 3.2rem;
+    font-weight: bold;
+    border: none;
+    text-align: end;
+    background: rgb(143,143,143);
+    border: 0.2rem solid #444;
+}
+.inputOutput {
+    border-radius: .5rem .5rem 0 0;
+    font-family: "DSDIGI";
+    border-bottom: none;
+    font-weight: 500;
+}
+/* CURSOR ANIMATION*/
+.outputBox::after {
+    content: '';
+    display: block;
+    width: .22rem;
+    height: 2.5rem;
+    position: absolute;
+    top: 17%;
+    right: 1.7rem;
+    animation: animatedCursor .75s step-end infinite;
+}
+@keyframes animatedCursor {
+    from, to { background: transparent } 60% {
+        background: red;
+    }
+}
+.resultOutput {
+    border-radius: 0 0 .5rem .5rem;
+    border-top: none;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 500;
+}
+
+.output:focus {
+    outline: none;
+}
+.container {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 80%;
+    padding: 1rem;
+}
+.btn {
+    width: 5.185rem;
+    height: 4rem;
+    margin-right: .5rem;
+    border-radius: 1rem;
+    border: none;
+    background: #6b6868;
+    border: 0.1rem solid rgba(45,0,82,0.949);
+    border-bottom: 0.2rem solid rgba(45,0,82,0.949);
+    color: #ddd;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: .3s;
+    box-shadow: 0 0 0.2rem 0.1rem skyblue;
+}
+.btn:focus {
+    outline: none;
+}
+.btn:active {
+    height: 3.5rem;
+    background: rgba(0,0,0,0.945);
+    font-size: 1.8rem;
+}
+.operator {
+    width: 6.5rem;
+    margin-right: 0;
+    background: rgba(0,100,96,0.473);
+    border: 0.1rem solid rgba(0,33,32,0.475);
+    border-bottom: 0.2rem solid rgba(0,33,32,0.475);
+    float: right;
+}
+.operator:active {
+    background: rgba(0,100,96,0.722);
+}
+.ac {
+    background: #a30000;
+    font-weight: bold;
+    border: 0.1rem solid rgba(76,0,0,0.876);
+    border-bottom: 0.2rem solid rgba(76,0,0,0.876);
+}
+.ac:active {
+    background: rgb(63,0,0);
+}
+.equal {
+    background: rgb(1,117,0);
+    font-weight: bold;
+    border: 0.1rem solid rgb(1,73,0);
+    border-bottom: 0.2rem solid rgb(1,73,0);
+    width: 10.87rem;
+}
+.equal:active {
+    background: rgb(1,73,0);
+}
+.row {
+    margin-bottom: 2rem;
+}
+.add {
+    height: 10rem;
+}
+.add:active {
+    height: 9.5rem;
+}
+.btnSc {
+    background: rgba(34,34,34,0.663);
+}
+.dblZero {
+    background: #6b6868;
+}
+.cutBtn {
+    background: rgb(114,0,0);
+    font-weight: 500;
+}
+.cutArray {
+    position: absolute;
+    top: 17%;
+    left: 5%;
+    font-size: 1.6rem;
+    font-weight: 900;
+    color: #9b0000;
+    cursor: pointer;
+    border-radius: 50%;
+    padding: 0 0.5rem;
+    background: rgba(0,0,0,0.2);
+    display: none;
+}
+@media only screen and (max-width: 900px){
+    html {
+        font-size: 9px;
+    }
+}
+@media only screen and (max-width: 768px){
+    html {
+        font-size: 10px;
+    }
+    .calculator{
+        width: 35rem;
+    }
+    .inputOutput {
+        padding-left: 2.7rem;
+    }
+    .btnSc {
+        display: none;
+    }
+    .equal {
+        width: 5.185rem;
+    }
+    .cutArray {
+        display: block;
+    }
+}
